@@ -1,0 +1,70 @@
+\documentclass[10pt, twoside]{article}
+\usepackage{be-my-concrete, be-my-geometry}
+\usepackage{extra-algebra}
+\usepackage{tikz}
+\usepackage{csquotes}
+\setcounter{MaxMatrixCols}{15}
+
+
+\begin{document}
+
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north west] at (current page.north west)
+    {\includegraphics[width=\paperwidth,height=\paperheight]{poster.pdf}};
+\end{tikzpicture}
+
+\clearpage
+
+\pagestyle{empty}
+\input{sections/abstract.tex}
+\newpage
+
+\tableofcontents
+\newpage
+
+\setcounter{page}{1}
+\pagestyle{fancy}
+%советы для подопечных
+% \input{sections/intro.tex}
+\newpage
+
+%%% ЗАНЯТИЯ %%%
+\input{sections/onevarfunc.tex}
+\input{sections/derivative.tex}
+\input{sections/derivative_useful.tex}
+\newpage
+\input{sections/integral.tex}
+\input{sections/oscillations.tex}
+%%%%%%%%%%%%%%%%
+
+\newpage
+\pagestyle{empty}
+\renewcommand{\thesubsection}{\roman{subsection}}
+\setcounter{subsection}{0}
+\markboth{Задачи}{Задачи}
+\addcontentsline{toc}{section}{Задачи}
+\section*{Задачи}
+%%% ЗАДАЧИ %%%
+\input{problems/les1.tex}
+\newpage
+\thispagestyle{empty}
+\input{problems/les2.tex}
+\newpage
+\thispagestyle{empty}
+\input{problems/les3.tex}
+\newpage
+\thispagestyle{empty}
+\input{problems/les4.tex}
+\newpage
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%
+
+%%% ЗАГОН %%%
+\newpage
+\thispagestyle{empty}
+\input{problems/zagon.tex}
+
+\end{document}
